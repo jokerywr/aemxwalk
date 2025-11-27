@@ -385,13 +385,6 @@
                   {
                     "component": "text",
                     "valueType": "string",
-                    "name": "range_value",
-                    "label": "Size Group Value",
-                    "value": ""
-                  },
-                  {
-                    "component": "text",
-                    "valueType": "string",
                     "name": "range_unit",
                     "label": "Size Group Unit",
                     "value": ""
