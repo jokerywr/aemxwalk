@@ -161,6 +161,30 @@
     ]
   },
   {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "container",
+        "name": "images",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "image"
+          },
+          {
+            "component": "text",
+            "name": "imageAlt"
+          },
+          {
+            "component": "text",
+            "name": "imageDescription"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -176,6 +200,23 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "filter",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "textContent_cta",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "textContent_ctaText",
+        "label": "CTA label",
+        "valueType": "string"
       }
     ]
   },
@@ -208,16 +249,9 @@
       },
       {
         "component": "richtext",
-        "name": "title",
+        "name": "text",
         "value": "",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "subtitle",
-        "value": "",
-        "label": "Subtitle",
+        "label": "Text",
         "valueType": "string"
       }
     ]
