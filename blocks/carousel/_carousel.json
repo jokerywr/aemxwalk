@@ -19,8 +19,49 @@
       "id": "carousel",
       "fields": [
         {
+          "component": "select",
+          "name": "classes_variant",
+          "value": "",
+          "label": "variant",
+          "description": "",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Image & Text",
+              "value": "imageText"
+            },
+            {
+              "name": "Text & Image",
+              "value": "textImage"
+            },
+            {
+              "name": "Icon & Text",
+              "value": "iconText"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_slidesToShow",
+          "value": "",
+          "label": "Slides to Show",
+          "description": "",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "4 Slides",
+              "value": "fourSlides"
+            },
+            {
+              "name": "3 Slides",
+              "value": "threeSlides"
+            }
+          ]
+        },
+        {
           "component": "container",
-          "name": "images",
+          "label": "Slides",
+          "name": "slides",
           "multi": true,
           "fields" : [
             {
@@ -29,7 +70,8 @@
               "name": "image",
               "label": "Image",
               "multi": false,
-              "value": ""
+              "value": "",
+              "required": true
             },
             {
               "component": "text",
