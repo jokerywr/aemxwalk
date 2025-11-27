@@ -170,15 +170,25 @@
         "fields": [
           {
             "component": "reference",
-            "name": "image"
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false,
+            "value": ""
           },
           {
             "component": "text",
-            "name": "imageAlt"
+            "valueType": "string",
+            "name": "imageAlt",
+            "label": "Image Alt Text",
+            "value": ""
           },
           {
             "component": "text",
-            "name": "imageDescription"
+            "valueType": "string",
+            "name": "description",
+            "label": "Description",
+            "value": ""
           }
         ]
       }
