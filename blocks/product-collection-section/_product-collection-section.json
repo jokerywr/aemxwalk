@@ -1,0 +1,48 @@
+{
+  "definitions": [
+    {
+      "title": "Product Collection Section",
+      "id": "product-collection-section",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/section/v1/section",
+            "template": {
+              "model": "product-collection-section",
+              "name": "Product Collection Section"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-collection-section",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "categorySection_name",
+          "label": "Section Name",
+          "required": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "categorySection_title",
+          "label": "Section Title",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "product-collection-section",
+      "components": [
+        "product-collection-banner"
+      ]
+    }
+  ]
+}

@@ -41,5 +41,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "product-collection-section",
+    "components": [
+      "product-collection-banner"
+    ]
   }
 ]

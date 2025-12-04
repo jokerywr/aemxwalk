@@ -256,169 +256,6 @@
     ]
   },
   {
-    "id": "filter",
-    "fields": [
-      {
-        "component": "select",
-        "name": "classes_category",
-        "value": "",
-        "label": "Category",
-        "description": "",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Television",
-            "value": "television"
-          },
-          {
-            "name": "Refrigerator",
-            "value": "refrigerator"
-          }
-        ]
-      },
-      {
-        "component": "container",
-        "label": "Filter Configuration",
-        "name": "filterConfig",
-        "fields": [
-          {
-            "component": "checkbox-group",
-            "label": "Enable Category-Specific Filters (Checkbox)",
-            "name": "checkbox",
-            "valueType": "string[]",
-            "options": [
-              {
-                "name": "Price",
-                "value": "price"
-              },
-              {
-                "name": "Display Type",
-                "value": "displayType"
-              },
-              {
-                "name": "Size",
-                "value": "size"
-              },
-              {
-                "name": "Weight",
-                "value": "weight"
-              }
-            ]
-          },
-          {
-            "component": "container",
-            "label": "Group Filter Configuration",
-            "name": "groupFilterConfig",
-            "multi": true,
-            "fields": [
-              {
-                "component": "text",
-                "valueType": "string",
-                "name": "filter_name",
-                "label": "Filter Name",
-                "value": ""
-              },
-              {
-                "component": "select",
-                "label": "Select",
-                "name": "select",
-                "valueType": "string",
-                "options": [
-                  {
-                    "name": "Default",
-                    "value": "defaultFilter"
-                  },
-                  {
-                    "name": "Range Filter",
-                    "value": "rangeFilter"
-                  },
-                  {
-                    "name": "Price Filter",
-                    "value": "priceFilter"
-                  }
-                ]
-              },
-              {
-                "component": "container",
-                "label": "Default Filter Configuration",
-                "name": "defaultFilter",
-                "multi": true,
-                "condition": {
-                  "===": [
-                    {
-                      "var": "defaultFilter"
-                    },
-                    true
-                  ]
-                },
-                "fields": [
-                  {
-                    "component": "text",
-                    "valueType": "string",
-                    "name": "defaultFilter_label",
-                    "label": "Filter Label",
-                    "value": ""
-                  },
-                  {
-                    "component": "text",
-                    "valueType": "string",
-                    "name": "defaultFilter_key",
-                    "label": "Filter Key",
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "component": "container",
-                "label": "Range Filter Configuration",
-                "name": "rangeFilter",
-                "multi": true,
-                "condition": {
-                  "===": [
-                    {
-                      "var": "rangeFilter"
-                    },
-                    true
-                  ]
-                },
-                "fields": [
-                  {
-                    "component": "text",
-                    "valueType": "string",
-                    "name": "range_unit",
-                    "label": "Size Group Unit",
-                    "value": ""
-                  },
-                  {
-                    "component": "number",
-                    "name": "range_min",
-                    "label": "Min",
-                    "valueType": "number",
-                    "value": 0
-                  },
-                  {
-                    "component": "number",
-                    "name": "range_max",
-                    "label": "Max",
-                    "valueType": "number",
-                    "value": 0
-                  },
-                  {
-                    "component": "text",
-                    "valueType": "string",
-                    "name": "range_label",
-                    "label": "Group Label",
-                    "value": ""
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "fragment",
     "fields": [
       {
@@ -442,7 +279,7 @@
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",
-        "label": "Alt",
+        "label": "Image Alt Text",
         "value": ""
       },
       {
@@ -451,6 +288,105 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "container",
+        "label": "CTA Configuration",
+        "name": "ctaConfig",
+        "multi": true,
+        "fields": [
+          {
+            "component": "select",
+            "name": "ctaVariant",
+            "value": "",
+            "label": "CTA Variant",
+            "description": "",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "Primary",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary",
+                "value": "secondary"
+              }
+            ]
+          },
+          {
+            "component": "aem-content",
+            "name": "ctaLink",
+            "value": "",
+            "label": "CTA Link",
+            "valueType": "string",
+            "validation": {
+              "rootPath": "/content/hisense"
+            }
+          },
+          {
+            "component": "text",
+            "name": "ctaText",
+            "label": "CTA label",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product-collection-banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "productCollectionBanner_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "productCollectionBanner_imageAlt",
+        "label": "Image alt text",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "productCollectionBanner_textContent",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "productCollectionBanner_cta",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "productCollectionBanner_ctaLabel",
+        "label": "CTA label",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "product-collection-section",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "categorySection_name",
+        "label": "Section Name",
+        "required": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "categorySection_title",
+        "label": "Section Title",
+        "required": true
       }
     ]
   },
