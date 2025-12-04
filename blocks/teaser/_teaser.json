@@ -57,5 +57,7 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    "Button"
+  ]
 }
