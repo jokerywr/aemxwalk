@@ -40,48 +40,6 @@
           "value": "",
           "label": "Text",
           "valueType": "string"
-        },
-        {
-          "component": "container",
-          "label": "CTA Configuration",
-          "name": "ctaConfig",
-          "multi": true,
-          "fields" : [
-            {
-              "component": "select",
-              "name": "ctaVariant",
-              "value": "",
-              "label": "CTA Variant",
-              "description": "",
-              "valueType": "string",
-              "options": [
-                {
-                  "name": "Primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "Secondary",
-                  "value": "secondary"
-                }
-              ]
-            },
-            {
-              "component": "aem-content",
-              "name": "ctaLink",
-              "value": "",
-              "label": "CTA Link",
-              "valueType": "string",
-              "validation": {
-                "rootPath": "/content/hisense"
-              }
-            },
-            {
-              "component": "text",
-              "name": "ctaText",
-              "label": "CTA label",
-              "valueType": "string"
-            }
-          ]
         }
       ]
     }
